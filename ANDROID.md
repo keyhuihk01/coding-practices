@@ -256,11 +256,11 @@ https://github.com/orhanobut/logger
 Logger.d("hello")
 ```
 
-### ProGuard
+## ProGuard
 
 **Rememebr to update ProGuard when adding new library**
 
 
-### Unit Test ###
+## Unit Test
 
 **[WIP]**
