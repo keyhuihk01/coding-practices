@@ -5,6 +5,7 @@
 * [Cocoapods](#cocoapods)
 * [Project Structure](#project-structure)
 * [Swift](#swift)
+* [ViewController](#viewcontroller)
 * [Log](#log)
 * [Unit Test](#unit-test)
 
@@ -240,6 +241,26 @@ view.snp.makeConstraints { (make) in
 	make.height.equalToSuperview()
 }
 ```
+
+### ViewController
+
+#### Class Structure for MVVM
+
+```swift
+class WelcomeViewController: BaseViewController, TypedViewControllerProtocol {
+    typealias ViewType = WelcomeView
+    let vm = WelcomeVM()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view = createTypedView()
+
+        // other stuff...
+    }
+}
+```
+
+
 
 ### Log
 
