@@ -22,6 +22,7 @@
 #### Cocoapods (https://guides.cocoapods.org/using/getting-started.html) Installation
 ```bash
 sudo gem install cocoapods
+pod install
 ```
 
 
@@ -29,11 +30,11 @@ sudo gem install cocoapods
 
 **Keep the project tree Sort by Name and Type**
 
-- 1. `Right Click the folder`
+1. `Right Click the folder`
 
-- 2. `Sort by Type`
+2. `Sort by Type`
 
-- 3. `Sort by Name`
+3. `Sort by Name`
 
 
 **MVVM**
@@ -196,7 +197,7 @@ let widthString = "\(width)"                         // String
 
 **Bad**
 ```swift
-let width: Double = 120.0                                    // Double
+let width: Double = 120.0                            // Double
 let widthString = (width as NSNumber).stringValue    // String
 ```
 
@@ -232,7 +233,7 @@ view.snp.makeConstraints {
 }
 ```
 
-**Not Good, Not Bad, but more code**
+**Not Good, need more code**
 ```swift
 view.snp.makeConstraints { (make) in
 	make.width.equalToSuperview()
