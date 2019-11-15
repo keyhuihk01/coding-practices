@@ -2,15 +2,15 @@
 
 ## Summary
 
-#### [Gradle](#gradle)
-#### [Project Structure](#project-structure)
-#### [Kotlin](#kotlin)
-#### [Activity and Fragment](#activity-and-fragment)
-#### [Layout XML](#layout-xml)
-#### [Resources](#resources)
-#### [Log](#log)
-#### [ProGuard](#proguard)
-#### [Unit Test](#unit-test)
+* [Gradle](#gradle)
+* [Project Structure](#project-structure)
+* [Kotlin](#kotlin)
+* [Activity and Fragment](#activity-and-fragment)
+* [Layout XML](#layout-xml)
+* [Resources](#resources)
+* [Log](#log)
+* [ProGuard](#proguard)
+* [Unit Test](#unit-test)
 
 ----------
 
@@ -256,11 +256,11 @@ https://github.com/orhanobut/logger
 Logger.d("hello")
 ```
 
-## ProGuard
+### ProGuard
 
 **Rememebr to update ProGuard when adding new library**
 
 
-## Unit Test
+### Unit Test
 
 **[WIP]**
