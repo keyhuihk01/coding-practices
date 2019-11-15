@@ -14,7 +14,7 @@
 
 ----------
 
-### Gradle configuration
+### Gradle
 
 **Prefer Maven dependency resolution to importing jar files.**
 
@@ -46,11 +46,11 @@ dependencies {
 	├─ data
 	├─ screens
 	  ├─ home
-	  ├─ activity
-	  ├─ adapter
-	  ├─ fragment
-	  ├─ viewholder
-	  ├─ viewmodel
+	    ├─ activity
+	    ├─ adapter
+	    ├─ fragment
+	    ├─ viewholder
+	    ├─ viewmodel
 	├─ utils
 
 ### Kotlin
