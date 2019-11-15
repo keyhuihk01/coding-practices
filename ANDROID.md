@@ -41,22 +41,23 @@ dependencies {
 
 	├─ api
 	├─ core
-		├─ App (The Application class Here)
-		├─ Manager Class
+	  ├─ App (The Application class Here)
+	  ├─ Manager Class
 	├─ data
 	├─ screens
-		├─ home
-			├─ activity
-			├─ adapter
-			├─ fragment
-			├─ viewholder
-			├─ viewmodel
+	  ├─ home
+	  ├─ activity
+	  ├─ adapter
+	  ├─ fragment
+	  ├─ viewholder
+	  ├─ viewmodel
 	├─ utils
 
 ### Kotlin
 
-**Use Optional `?` and `?.let` when possible**
-**Always don't use `!!`**
+Use Optional `?` and `?.let` when possible
+
+**Always Don't Use `!!`**
 
 **Good**
 ```kotlin
@@ -150,17 +151,27 @@ Examples: `fragment_content_details.xml`, `view_primary_button.xml`, `activity_m
 
 **Android:id Naming**
 RelativeLayout --> rl_container
+
 LinearLayout   --> ll_container
+
 FragmentLayout --> fl_container
+
 TextView 	   --> tv_title
+
 Button 	       --> btn_login
+
 View           --> v_space
+
 EditText       --> et_input
+
 ImageView      --> iv_logo
+
 ScrollView     --> sv_container
+
 RecyclerView   --> rv_list
 
 **Organizing layout XMLs.**
+
 Always format it after eidt. Android Studio Shortcut `Option + Commnad + L` in MacOS.
 
 
