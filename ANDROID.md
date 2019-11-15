@@ -174,6 +174,10 @@ ScrollView     --> sv_container
 RecyclerView   --> rv_list
 ```
 
+```
+RecyclerView Item -> item_xxx
+```
+
 **Organizing layout XMLs.**
 
 Always format it after eidt. Android Studio Shortcut `Option + Commnad + L` in MacOS.
