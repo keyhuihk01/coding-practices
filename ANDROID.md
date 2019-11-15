@@ -38,19 +38,19 @@ dependencies {
 ### Project Structure
 
 **MVVM**
-|- api
-|- core
-	|- App (The Application class Here)
-	|- Manager Class
-|- data
-|- screens
-	|- home
-		|- activity
-		|- adapter
-		|- fragment
-		|- viewholder
-		|- viewmodel
-|- utils
+├─ api
+├─ core
+	├─ App (The Application class Here)
+	├─ Manager Class
+├─ data
+├─ screens
+	├─ home
+		├─ activity
+		├─ adapter
+		├─ fragment
+		├─ viewholder
+		├─ viewmodel
+├─ utils
 
 ### Kotlin
 
