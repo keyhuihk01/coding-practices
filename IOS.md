@@ -8,7 +8,7 @@
 * [Log](#log)
 * [Unit Test](#unit-test)
 
-- Other Reference: raywenderlich(https://github.com/raywenderlich/swift-style-guide)
+- Other Reference: raywenderlich (https://github.com/raywenderlich/swift-style-guide)
 
 ----------
 
@@ -166,6 +166,79 @@ var view: UIView
 var deviceModels: [String]
 ```
 
+#### Function Declarations
+
+**Good**
+```swift
+func updateConstraints() -> Void {
+  // magic happens here
+}
+
+typealias CompletionHandler = (result) -> Void
+```
+
+**Bad**
+```swift
+func updateConstraints() -> () {
+  // magic happens here
+}
+
+typealias CompletionHandler = (result) -> ()
+```
+
+#### Types - Always use Swift's native types and expressions when available.
+
+**Good**
+```swift
+let width = 120.0                                    // Double
+let widthString = "\(width)"                         // String
+```
+
+**Bad**
+```swift
+let width: Double = 120.0                                    // Double
+let widthString = (width as NSNumber).stringValue    // String
+```
+
+#### Weak Reference, use optional instead of guard
+
+**Good**
+```swift
+typedView.btnMore.rx.tap
+	.observeOn(MainScheduler.instance)
+	.subscribe(onNext: { [weak self] _ in
+		self?.navigationController?.pushViewController(TargetViewController.getInstance(), animated: true)
+		}).disposed(by: disposeBag)
+```
+
+**Bad**
+```swift
+typedView.btnMore.rx.tap
+	.observeOn(MainScheduler.instance)
+	.subscribe(onNext: { [weak self] _ in
+		guard let _self = self else { return }
+		_self.navigationController?.pushViewController(TargetViewController.getInstance(), animated: true)
+		}).disposed(by: disposeBag)
+```
+
+
+#### Use of Closure Parameter `$0` in SnapKit or Single Parameter Closure
+
+**Good**
+```swift
+view.snp.makeConstraints {
+	$0.width.equalToSuperview()
+	$0.height.equalToSuperview()
+}
+```
+
+**Not Good, Not Bad, but more code**
+```swift
+view.snp.makeConstraints { (make) in
+	make.width.equalToSuperview()
+	make.height.equalToSuperview()
+}
+```
 
 ### Log
 
