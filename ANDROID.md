@@ -2,15 +2,15 @@
 
 ## Summary
 
-#### [Gradle](#build-system)
-#### [Project Structure]
-#### [Kotlin]
-#### [Activity and Fragment]
-#### [Layout XML]
-#### [Resources]
-#### [Log]
-#### [ProGuard]
-#### [Unit Test]
+#### [Gradle](#gradle)
+#### [Project Structure](#project-structure)
+#### [Kotlin](#kotlin)
+#### [Activity and Fragment](#activity-and-fragment)
+#### [Layout XML](#layout-xml)
+#### [Resources](#resources)
+#### [Log](#log)
+#### [ProGuard](#proguard)
+#### [Unit Test](#unit-test)
 
 ----------
 
@@ -100,7 +100,8 @@ btn_login.setOnClickListener {
 ```
 
 **Use of Rx**
-In ViewModel
+
+- In ViewModel
 ```kotlin
 val sIsLoading = PublishSubject.create<Boolean>()
 ..
@@ -108,7 +109,7 @@ val sIsLoading = PublishSubject.create<Boolean>()
 sIsLoading.onNext(true)
 ```
 
-In Activity or Fragment
+- In Activity or Fragment
 ```kotlin
 disposables.addAll(
 	vm.sIsLoading
