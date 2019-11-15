@@ -242,6 +242,45 @@ view.snp.makeConstraints { (make) in
 }
 ```
 
+#### Constants, Swift does not prefer all capital letters
+
+**Good**
+```swift
+struct Constants {
+    static let transitionTime: TimeInterval = 0.5
+}
+```
+
+**Bad**
+```swift
+struct Constants {
+    static let kTransitionTime: TimeInterval = 0.5
+    static let TRANSITION_TIME: TimeInterval = 0.5
+}
+```
+
+#### Enum
+
+**Good**
+```swift
+enum DataKey: String {
+    case isFirstLaunch = "is_first_launch"
+}```
+
+**Bad**
+```swift
+enum DataKey: String {
+    case Is_First_Launch = "is_first_launch"
+}
+```
+
+**Bad**
+```swift
+enum DataKey: String {
+    case is_first_launch = "is_first_launch"
+}
+```
+
 ### ViewController
 
 #### Class Structure for MVVM
