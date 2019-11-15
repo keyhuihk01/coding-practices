@@ -147,9 +147,12 @@ GameFragment.Builder().setIsGameMode(true).build()
 
 **Naming.** 
 Follow the convention of prefixing the type, as in `type_foo_bar.xml`. 
+
 Examples: `fragment_content_details.xml`, `view_primary_button.xml`, `activity_main.xml`.
 
 **Android:id Naming**
+
+```
 RelativeLayout --> rl_container
 
 LinearLayout   --> ll_container
@@ -169,6 +172,7 @@ ImageView      --> iv_logo
 ScrollView     --> sv_container
 
 RecyclerView   --> rv_list
+```
 
 **Organizing layout XMLs.**
 
