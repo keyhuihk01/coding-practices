@@ -38,7 +38,7 @@ sudo gem install cocoapods
 
 **MVVM**
 
-#### Main Target - using RxSwift(https://github.com/ReactiveX/RxSwift)
+#### Main Target - using RxSwift (https://github.com/ReactiveX/RxSwift)
 
 	├─ Core
 	  ├─ Manager Class
@@ -52,7 +52,7 @@ sudo gem install cocoapods
 	├─ Utils
 	├─ AppDelegate.swift
 
-#### UIKit - using SnapKit(https://github.com/SnapKit/SnapKit)
+#### UIKit - using SnapKit (https://github.com/SnapKit/SnapKit)
 
     ├─ Extensions
 	├─ Fundamentals (Base & Constants Class)
@@ -70,7 +70,7 @@ sudo gem install cocoapods
 	├─ Responses
 
 
-#### ResourceKit - using R.swift(https://github.com/mac-cain13/R.swift)
+#### ResourceKit - using R.swift (https://github.com/mac-cain13/R.swift)
 
     ├─ Assets.xcassets
 	├─ Colors.xcassets
@@ -99,7 +99,7 @@ class SomeViewController: UIViewController {
 let vc = SomeViewController.getInstance(value: 777)
 ```
 
-**Native way but not friendly for coding**
+**Bad, native way but not friendly for coding**
 ```swift
 class SomeViewController: UIViewController {
 
@@ -121,6 +121,49 @@ class SomeViewController: UIViewController {
 
 // Usage
 let vc = SomeViewController(someValue: 777)
+```
+
+#### Protocol
+
+**Good**
+```swift
+class MyViewController: UIViewController {
+  // class stuff here
+}
+
+// MARK: - UITableViewDataSource
+extension MyViewController: UITableViewDataSource {
+  // table view data source methods
+}
+
+// MARK: - UIScrollViewDelegate
+extension MyViewController: UIScrollViewDelegate {
+  // scroll view delegate methods
+}
+```
+
+**Bad**
+```swift
+class MyViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
+  // all methods
+}
+```
+
+#### Minimal Imports
+
+**Good**
+```swift
+import UIKit
+var view: UIView
+var deviceModels: [String]
+```
+
+**Bad**
+```swift
+import UIKit
+import Foundation
+var view: UIView
+var deviceModels: [String]
 ```
 
 
