@@ -232,9 +232,20 @@ Always format it after eidt. Android Studio Shortcut `Option + Commnad + L` in M
 
 ### Log
 
+**Use Logger Library**
+
+https://github.com/orhanobut/logger
+
+```kotlin
+Logger.d("hello")
+```
 
 ### ProGuard
 
+**Rememebr to update ProGuard when adding new library**
 
+
+<a name="unit-test"></a>
 ### Unit Test
 
+**[WIP]**
