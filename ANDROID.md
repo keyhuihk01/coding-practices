@@ -261,7 +261,7 @@ Logger.d("hello")
 **Rememebr to update ProGuard when adding new library**
 
 
-<a name="unit-test"></a>
+[#unit-test]
 ### Unit Test
 
 **[WIP]**
