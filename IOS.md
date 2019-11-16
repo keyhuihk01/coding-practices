@@ -101,7 +101,7 @@ class SomeViewController: UIViewController {
 let vc = SomeViewController.getInstance(value: 777)
 ```
 
-**Bad, native way but not friendly for coding**
+**Native way but not friendly for coding**
 ```swift
 class SomeViewController: UIViewController {
 
@@ -202,6 +202,20 @@ let width: Double = 120.0                            // Double
 let widthString = (width as NSNumber).stringValue    // String
 ```
 
+#### Static Constants
+
+**Good**
+```swift
+static let kName = "MyString"
+static let kWidth = 120.0
+```
+
+**Bad**
+```swift
+static let NAME = "MyString"
+static let witdh = 120.0
+```
+
 #### Weak Reference, use optional instead of guard
 
 **Good**
@@ -298,7 +312,6 @@ class WelcomeViewController: BaseViewController, TypedViewControllerProtocol {
     }
 }
 ```
-
 
 
 ### Log
