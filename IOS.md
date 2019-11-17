@@ -216,7 +216,7 @@ static let NAME = "MyString"
 static let witdh = 120.0
 ```
 
-#### Weak Reference, use optional instead of guard
+#### Weak Reference, use optional instead of guard if possible
 
 **Good**
 ```swift
@@ -224,6 +224,17 @@ typedView.btnMore.rx.tap
 	.observeOn(MainScheduler.instance)
 	.subscribe(onNext: { [weak self] _ in
 		self?.navigationController?.pushViewController(TargetViewController.getInstance(), animated: true)
+		}).disposed(by: disposeBag)
+```
+
+**OK, more than one nil checking**
+```swift
+typedView.btnMore.rx.tap
+	.observeOn(MainScheduler.instance)
+	.subscribe(onNext: { [weak self] item in
+		guard let _self = self else { return }
+		_self.someValue = _self.someValue + item.value
+		_self.navigationController?.pushViewController(TargetViewController.getInstance(), animated: true)
 		}).disposed(by: disposeBag)
 ```
 
